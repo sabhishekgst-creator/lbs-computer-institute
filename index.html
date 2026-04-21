@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lal Bahadur Shastri Computer Training Institute</title>
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+    body{background:#f5f7fa;color:#222}
+    header{
+      position:fixed;top:0;left:0;width:100%;z-index:999;
+      background:#ffffff;box-shadow:0 2px 10px rgba(0,0,0,.08);
+      display:flex;justify-content:space-between;align-items:center;
+      padding:15px 40px;
+    }
+    .logo{display:flex;align-items:center;gap:12px;font-weight:700;font-size:20px}
+    .logo img{width:50px;height:50px;border-radius:50%}
+    nav a{text-decoration:none;color:#222;margin-left:24px;font-weight:600}
+    nav a:hover{color:#0a7cff}
+
+    .hero{
+      min-height:100vh;
+      background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+      url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1600&q=80') center/cover;
+      display:flex;align-items:center;justify-content:center;text-align:center;
+      padding:120px 20px 60px;
+      color:white;
+    }
+    .hero h1{font-size:48px;max-width:900px;margin:auto}
+    .hero p{margin:18px 0;font-size:18px}
+    .btn{
+      display:inline-block;background:#00cfff;color:#000;
+      padding:14px 28px;border-radius:10px;text-decoration:none;
+      font-weight:700;transition:.3s
+    }
+    .btn:hover{transform:translateY(-2px)}
+
+    section{padding:80px 40px}
+    .title{text-align:center;font-size:34px;margin-bottom:40px}
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:24px;
+    }
+    .card{
+      background:#fff;border-radius:18px;overflow:hidden;
+      box-shadow:0 10px 30px rgba(0,0,0,.08);
+      transition:.3s
+    }
+    .card:hover{transform:translateY(-6px)}
+    .card img{width:100%;height:180px;object-fit:cover}
+    .card .content{padding:20px}
+    .card h3{margin-bottom:10px}
+
+    .about{background:#fff}
+    .about-box{
+      max-width:1000px;margin:auto;text-align:center;line-height:1.8
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:30px;
+      align-items:start;
+    }
+    iframe{width:100%;height:350px;border:none;border-radius:18px}
+    .contact-box{
+      background:#fff;padding:30px;border-radius:18px;
+      box-shadow:0 10px 30px rgba(0,0,0,.08)
+    }
+    .contact-box h3{margin-bottom:15px}
+    .contact-box p{margin-bottom:12px}
+
+    footer{
+      background:#111;color:#ddd;text-align:center;
+      padding:30px 20px
+    }
+
+    .wa-btn{
+      position:fixed;right:20px;bottom:20px;
+      background:#25D366;color:white;
+      width:60px;height:60px;border-radius:50%;
+      display:flex;align-items:center;justify-content:center;
+      font-size:30px;text-decoration:none;
+      box-shadow:0 10px 20px rgba(0,0,0,.2)
+    }
+
+    @media(max-width:768px){
+      header{padding:15px 20px;flex-direction:column;gap:12px}
+      nav a{margin:0 8px;font-size:14px}
+      .hero h1{font-size:30px}
+      section{padding:60px 20px}
+      .contact-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="logo.png" alt="logo">
+    <span>LBS Computer Institute</span>
+  </div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#courses">Courses</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div>
+    <h1>Lal Bahadur Shastri Computer Training Institute</h1>
+    <p>Professional Computer Education for a Better Future</p>
+    <a class="btn" href="https://wa.me/919807440024" target="_blank">Join Now</a>
+  </div>
+</section>
+
+<section id="courses">
+  <h2 class="title">Our Courses</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80">
+      <div class="content">
+        <h3>ADCA</h3>
+        <p>Advanced Diploma in Computer Applications</p>
+        <p><strong>Fees:</strong> ₹6500</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80">
+      <div class="content">
+        <h3>CCC</h3>
+        <p>Course on Computer Concepts</p>
+        <p><strong>Fees:</strong> ₹2500</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=900&q=80">
+      <div class="content">
+        <h3>Tally + GST</h3>
+        <p>Accounting and Business Software Training</p>
+        <p><strong>Fees:</strong> ₹5500</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <h2 class="title">About Institute</h2>
+  <div class="about-box">
+    <p>
+      Our institute provides high-quality computer education with practical learning,
+      experienced faculty, career guidance, and modern labs. We focus on real skills,
+      confidence building, and job-ready training for every student.
+    </p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="title">Contact Us</h2>
+  <div class="contact-grid">
+    <div class="contact-box">
+      <h3>Institute Details</h3>
+      <p><strong>Name:</strong> Lal Bahadur Shastri Computer Training Institute</p>
+      <p><strong>Phone:</strong> +91 9807440024</p>
+      <p><strong>Email:</strong> yourmail@example.com</p>
+      <p><strong>Address:</strong> Add your full institute address here</p>
+      <a class="btn" href="https://wa.me/919807440024" target="_blank">WhatsApp Now</a>
+    </div>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3567.2025561028063!2d81.58104737486252!3d26.609953376829004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399a35293e587511%3A0xaa56094f0e0a69c9!2sLal%20Bahadur%20Shastri%20Computer%20Training%20Institute!5e0!3m2!1sen!2sin!4v1774979182099!5m2!1sen!2sin"></iframe>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Lal Bahadur Shastri Computer Training Institute | All Rights Reserved</p>
+</footer>
+
+<a class="wa-btn" href="https://wa.me/919807440024" target="_blank">
+  <i class='bx bxl-whatsapp'></i>
+</a>
+
+</body>
+</html>
