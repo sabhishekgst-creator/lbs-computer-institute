@@ -115,7 +115,7 @@
   <div>
     <h1>Lal Bahadur Shastri Computer Training Institute</h1>
     <p>Professional Computer Education for a Better Future</p>
-    <a class="btn" href="https://wa.me/919807440024" target="_blank">Join Now</a>
+    <a class="btn" href="https://wa.me/9198172422" target="_blank">Join Now</a>
   </div>
 </section>
 
@@ -162,16 +162,56 @@
   </div>
 </section>
 
+<section id="admission">
+  <h2 class="title">Admission Form</h2>
+  <div class="contact-grid">
+    <div class="contact-box">
+      <h3>Join Our Institute</h3>
+      <p>Fill your details and submit on WhatsApp instantly.</p>
+
+      <form onsubmit="sendAdmissionToWhatsApp(event)">
+        <p><input type="text" id="studentName" placeholder="Student Name" required style="width:100%;padding:12px;margin-bottom:12px;border:1px solid #ccc;border-radius:10px;"></p>
+        <p><input type="text" id="fatherName" placeholder="Father Name" required style="width:100%;padding:12px;margin-bottom:12px;border:1px solid #ccc;border-radius:10px;"></p>
+        <p><input type="tel" id="mobile" placeholder="Mobile Number" required style="width:100%;padding:12px;margin-bottom:12px;border:1px solid #ccc;border-radius:10px;"></p>
+        <p>
+          <select id="course" required style="width:100%;padding:12px;margin-bottom:12px;border:1px solid #ccc;border-radius:10px;">
+            <option value="">Select Course</option>
+            <option>ADCA</option>
+            <option>CCC</option>
+            <option>Tally + GST</option>
+            <option>O Level</option>
+            <option>Web Development</option>
+          </select>
+        </p>
+        <p><textarea id="address" placeholder="Full Address" required style="width:100%;padding:12px;height:120px;border:1px solid #ccc;border-radius:10px;"></textarea></p>
+        <br>
+        <button type="submit" class="btn" style="border:none;cursor:pointer;">Submit Admission</button>
+      </form>
+    </div>
+
+    <div class="contact-box">
+      <h3>Why Join Us?</h3>
+      <p>✔ Practical Computer Training</p>
+      <p>✔ Government Recognized Courses</p>
+      <p>✔ Experienced Faculty</p>
+      <p>✔ Affordable Fees</p>
+      <p>✔ Career Guidance + Placement Support</p>
+      <p>✔ Fast WhatsApp Admission Support</p>
+    </div>
+  </div>
+</section>
+
 <section id="contact">
   <h2 class="title">Contact Us</h2>
   <div class="contact-grid">
     <div class="contact-box">
       <h3>Institute Details</h3>
       <p><strong>Name:</strong> Lal Bahadur Shastri Computer Training Institute</p>
-      <p><strong>Phone:</strong> +91 9807440024</p>
+      <p><strong>Owner:</strong> Rahul Shrivastava</p>
+      <p><strong>Phone:</strong> +91 9198172422</p>
       <p><strong>Email:</strong> yourmail@example.com</p>
       <p><strong>Address:</strong> Add your full institute address here</p>
-      <a class="btn" href="https://wa.me/919807440024" target="_blank">WhatsApp Now</a>
+      <a class="btn" href="https://wa.me/9198172422" target="_blank">WhatsApp Now</a>
     </div>
 
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3567.2025561028063!2d81.58104737486252!3d26.609953376829004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399a35293e587511%3A0xaa56094f0e0a69c9!2sLal%20Bahadur%20Shastri%20Computer%20Training%20Institute!5e0!3m2!1sen!2sin!4v1774979182099!5m2!1sen!2sin"></iframe>
@@ -182,9 +222,26 @@
   <p>© 2026 Lal Bahadur Shastri Computer Training Institute | All Rights Reserved</p>
 </footer>
 
-<a class="wa-btn" href="https://wa.me/919807440024" target="_blank">
+<a class="wa-btn" href="https://wa.me/9198172422" target="_blank">
   <i class='bx bxl-whatsapp'></i>
 </a>
+
+<script>
+function sendAdmissionToWhatsApp(event){
+  event.preventDefault();
+
+  const studentName = document.getElementById('studentName').value;
+  const fatherName = document.getElementById('fatherName').value;
+  const mobile = document.getElementById('mobile').value;
+  const course = document.getElementById('course').value;
+  const address = document.getElementById('address').value;
+
+  const message = `New Admission Inquiry:%0A%0AStudent Name: ${studentName}%0AFather Name: ${fatherName}%0AMobile: ${mobile}%0ACourse: ${course}%0AAddress: ${address}`;
+
+  const whatsappURL = `https://wa.me/9198172422?text=${message}`;
+  window.open(whatsappURL, '_blank');
+}
+</script>
 
 </body>
 </html>
