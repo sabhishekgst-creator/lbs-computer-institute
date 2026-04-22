@@ -5,94 +5,232 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lal Bahadur Shastri Computer Training Institute</title>
   <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
   <style>
-    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-    body{background:#f5f7fa;color:#222}
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#f5f7fa;
+      color:#222;
+      line-height:1.6;
+    }
+
     header{
-      position:fixed;top:0;left:0;width:100%;z-index:999;
-      background:#ffffff;box-shadow:0 2px 10px rgba(0,0,0,.08);
-      display:flex;justify-content:space-between;align-items:center;
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      background:#ffffff;
+      z-index:999;
+      box-shadow:0 2px 10px rgba(0,0,0,.08);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
       padding:15px 40px;
     }
-    .logo{display:flex;align-items:center;gap:12px;font-weight:700;font-size:20px}
-    .logo img{width:50px;height:50px;border-radius:50%}
-    nav a{text-decoration:none;color:#222;margin-left:24px;font-weight:600}
-    nav a:hover{color:#0a7cff}
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-size:20px;
+      font-weight:700;
+    }
+
+    .logo img{
+      width:55px;
+      height:55px;
+      border-radius:50%;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:#222;
+      margin-left:22px;
+      font-weight:600;
+    }
+
+    nav a:hover{
+      color:#0a7cff;
+    }
 
     .hero{
       min-height:100vh;
-      background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+      background:linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
       url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1600&q=80') center/cover;
-      display:flex;align-items:center;justify-content:center;text-align:center;
-      padding:120px 20px 60px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
       color:white;
+      padding:120px 20px 60px;
     }
-    .hero h1{font-size:48px;max-width:900px;margin:auto}
-    .hero p{margin:18px 0;font-size:18px}
-    .btn{
-      display:inline-block;background:#00cfff;color:#000;
-      padding:14px 28px;border-radius:10px;text-decoration:none;
-      font-weight:700;transition:.3s
-    }
-    .btn:hover{transform:translateY(-2px)}
 
-    section{padding:80px 40px}
-    .title{text-align:center;font-size:34px;margin-bottom:40px}
+    .hero h1{
+      font-size:48px;
+      max-width:900px;
+      margin:auto;
+    }
+
+    .hero p{
+      margin:18px 0;
+      font-size:18px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:14px 28px;
+      background:#00d4ff;
+      color:#000;
+      text-decoration:none;
+      border:none;
+      border-radius:10px;
+      font-weight:700;
+      cursor:pointer;
+      transition:.3s;
+    }
+
+    .btn:hover{
+      transform:translateY(-2px);
+    }
+
+    section{
+      padding:80px 40px;
+    }
+
+    .title{
+      text-align:center;
+      font-size:34px;
+      margin-bottom:40px;
+    }
 
     .grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:24px;
+      gap:25px;
     }
+
     .card{
-      background:#fff;border-radius:18px;overflow:hidden;
+      background:#fff;
+      border-radius:18px;
+      overflow:hidden;
       box-shadow:0 10px 30px rgba(0,0,0,.08);
-      transition:.3s
+      transition:.3s;
     }
-    .card:hover{transform:translateY(-6px)}
-    .card img{width:100%;height:180px;object-fit:cover}
-    .card .content{padding:20px}
-    .card h3{margin-bottom:10px}
 
-    .about{background:#fff}
+    .card:hover{
+      transform:translateY(-6px);
+    }
+
+    .card img{
+      width:100%;
+      height:190px;
+      object-fit:cover;
+    }
+
+    .card .content{
+      padding:20px;
+    }
+
+    .about{
+      background:#fff;
+    }
+
     .about-box{
-      max-width:1000px;margin:auto;text-align:center;line-height:1.8
+      max-width:1000px;
+      margin:auto;
+      text-align:center;
+      font-size:17px;
     }
 
-    .contact-grid{
+    .two-col{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:30px;
       align-items:start;
     }
-    iframe{width:100%;height:350px;border:none;border-radius:18px}
-    .contact-box{
-      background:#fff;padding:30px;border-radius:18px;
-      box-shadow:0 10px 30px rgba(0,0,0,.08)
+
+    .box{
+      background:#fff;
+      padding:30px;
+      border-radius:18px;
+      box-shadow:0 10px 30px rgba(0,0,0,.08);
     }
-    .contact-box h3{margin-bottom:15px}
-    .contact-box p{margin-bottom:12px}
+
+    input, select, textarea{
+      width:100%;
+      padding:12px;
+      margin-bottom:14px;
+      border:1px solid #ccc;
+      border-radius:10px;
+      font-size:15px;
+    }
+
+    textarea{
+      height:120px;
+      resize:none;
+    }
+
+    iframe{
+      width:100%;
+      height:350px;
+      border:none;
+      border-radius:18px;
+    }
 
     footer{
-      background:#111;color:#ddd;text-align:center;
-      padding:30px 20px
+      background:#111;
+      color:#ddd;
+      text-align:center;
+      padding:30px 20px;
     }
 
     .wa-btn{
-      position:fixed;right:20px;bottom:20px;
-      background:#25D366;color:white;
-      width:60px;height:60px;border-radius:50%;
-      display:flex;align-items:center;justify-content:center;
-      font-size:30px;text-decoration:none;
-      box-shadow:0 10px 20px rgba(0,0,0,.2)
+      position:fixed;
+      right:20px;
+      bottom:20px;
+      width:60px;
+      height:60px;
+      border-radius:50%;
+      background:#25D366;
+      color:white;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:30px;
+      text-decoration:none;
+      box-shadow:0 10px 20px rgba(0,0,0,.2);
+      z-index:999;
     }
 
     @media(max-width:768px){
-      header{padding:15px 20px;flex-direction:column;gap:12px}
-      nav a{margin:0 8px;font-size:14px}
-      .hero h1{font-size:30px}
-      section{padding:60px 20px}
-      .contact-grid{grid-template-columns:1fr}
+      header{
+        padding:15px 20px;
+        flex-direction:column;
+        gap:12px;
+      }
+
+      nav a{
+        margin:0 8px;
+        font-size:14px;
+      }
+
+      .hero h1{
+        font-size:30px;
+      }
+
+      section{
+        padding:60px 20px;
+      }
+
+      .two-col{
+        grid-template-columns:1fr;
+      }
     }
   </style>
 </head>
@@ -103,10 +241,11 @@
     <img src="logo.png" alt="logo">
     <span>LBS Computer Institute</span>
   </div>
+
   <nav>
     <a href="#home">Home</a>
     <a href="#courses">Courses</a>
-    <a href="#about">About</a>
+    <a href="#admission">Admission</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
@@ -114,13 +253,14 @@
 <section class="hero" id="home">
   <div>
     <h1>Lal Bahadur Shastri Computer Training Institute</h1>
-    <p>Professional Computer Education for a Better Future</p>
-    <a class="btn" href="https://wa.me/9198172422" target="_blank">Join Now</a>
+    <p>Professional Computer Education for Better Future</p>
+    <a href="https://wa.me/9198172422" target="_blank" class="btn">Join Now</a>
   </div>
 </section>
 
 <section id="courses">
   <h2 class="title">Our Courses</h2>
+
   <div class="grid">
     <div class="card">
       <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80">
@@ -144,74 +284,131 @@
       <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=900&q=80">
       <div class="content">
         <h3>Tally + GST</h3>
-        <p>Accounting and Business Software Training</p>
+        <p>Accounting + GST + Tally Prime</p>
         <p><strong>Fees:</strong> ₹5500</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80">
+      <div class="content">
+        <h3>O Level</h3>
+        <p>Government Certified NIELIT Course</p>
+        <p><strong>Fees:</strong> ₹15000</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="about" id="about">
+<section class="about">
   <h2 class="title">About Institute</h2>
   <div class="about-box">
-    <p>
-      Our institute provides high-quality computer education with practical learning,
-      experienced faculty, career guidance, and modern labs. We focus on real skills,
-      confidence building, and job-ready training for every student.
-    </p>
+    Our institute provides practical computer education with experienced faculty, affordable fees, modern labs, government-recognized courses, and career guidance. We focus on real skills and job-ready training for every student.
   </div>
 </section>
 
+<!-- GOOGLE FORM BASED ONLINE ADMISSION SYSTEM -->
 <section id="admission">
+  <h2 class="title">Online Admission Form</h2>
+
+  <div class="two-col">
+    <div class="box">
+      <h3>Complete Online Admission</h3>
+      <br>
+      <p>
+        Fill the full admission form online. Your data will be automatically saved in Google Sheet (Excel format) and the institute can manage all student records easily.
+      </p>
+      <br>
+
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdDaRmH7-2WYGOS-m5X385oi4jU2TCmHaocPctICxRJE66ctg/viewform?usp=dialog" target="_blank" class="btn">
+        Fill Admission Form
+      </a>
+
+      <br><br>
+
+      <p><strong>Documents Required:</strong></p>
+      <p>✔ Student Name</p>
+      <p>✔ Father Name</p>
+      <p>✔ Mobile Number</p>
+      <p>✔ Full Address</p>
+      <p>✔ Course Selection</p>
+      <p>✔ Passport Size Photo</p>
+      <p>✔ Aadhaar Card</p>
+      <p>✔ Previous Qualification Details</p>
+    </div>
+
+    <div class="box">
+      <h3>Why Online Admission?</h3>
+      <br>
+      <p>✔ Data Auto Save in Google Sheet</p>
+      <p>✔ Excel Format Download</p>
+      <p>✔ Easy Student Management</p>
+      <p>✔ No Manual Register Work</p>
+      <p>✔ Fast Admission Process</p>
+      <p>✔ Mobile Friendly</p>
+      <p>✔ Secure Record Keeping</p>
+      <p>✔ Future Result + Login Integration</p>
+    </div>
+  </div>
+</section>
+
+<!-- OLD QUICK WHATSAPP ENQUIRY FORM -->
+<section id="quick-enquiry">
   <h2 class="title">Admission Form</h2>
-  <div class="contact-grid">
-    <div class="contact-box">
+
+  <div class="two-col">
+    <div class="box">
       <h3>Join Our Institute</h3>
-      <p>Fill your details and submit on WhatsApp instantly.</p>
+      <br>
 
       <form onsubmit="sendAdmissionToWhatsApp(event)">
-        <p><input type="text" id="studentName" placeholder="Student Name" required style="width:100%;padding:12px;margin-bottom:12px;border:1px solid #ccc;border-radius:10px;"></p>
-        <p><input type="text" id="fatherName" placeholder="Father Name" required style="width:100%;padding:12px;margin-bottom:12px;border:1px solid #ccc;border-radius:10px;"></p>
-        <p><input type="tel" id="mobile" placeholder="Mobile Number" required style="width:100%;padding:12px;margin-bottom:12px;border:1px solid #ccc;border-radius:10px;"></p>
-        <p>
-          <select id="course" required style="width:100%;padding:12px;margin-bottom:12px;border:1px solid #ccc;border-radius:10px;">
-            <option value="">Select Course</option>
-            <option>ADCA</option>
-            <option>CCC</option>
-            <option>Tally + GST</option>
-            <option>O Level</option>
-            <option>Web Development</option>
-          </select>
-        </p>
-        <p><textarea id="address" placeholder="Full Address" required style="width:100%;padding:12px;height:120px;border:1px solid #ccc;border-radius:10px;"></textarea></p>
-        <br>
-        <button type="submit" class="btn" style="border:none;cursor:pointer;">Submit Admission</button>
+        <input type="text" id="studentName" placeholder="Student Name" required>
+        <input type="text" id="fatherName" placeholder="Father Name" required>
+        <input type="tel" id="mobile" placeholder="Mobile Number" required>
+
+        <select id="course" required>
+          <option value="">Select Course</option>
+          <option>ADCA</option>
+          <option>CCC</option>
+          <option>Tally + GST</option>
+          <option>O Level</option>
+          <option>Web Development</option>
+        </select>
+
+        <textarea id="address" placeholder="Full Address" required></textarea>
+
+        <button type="submit" class="btn">Submit Admission</button>
       </form>
     </div>
 
-    <div class="contact-box">
+    <div class="box">
       <h3>Why Join Us?</h3>
+      <br>
       <p>✔ Practical Computer Training</p>
       <p>✔ Government Recognized Courses</p>
       <p>✔ Experienced Faculty</p>
       <p>✔ Affordable Fees</p>
-      <p>✔ Career Guidance + Placement Support</p>
-      <p>✔ Fast WhatsApp Admission Support</p>
+      <p>✔ Career Guidance</p>
+      <p>✔ Placement Support</p>
+      <p>✔ Fast WhatsApp Support</p>
     </div>
   </div>
 </section>
 
 <section id="contact">
   <h2 class="title">Contact Us</h2>
-  <div class="contact-grid">
-    <div class="contact-box">
+
+  <div class="two-col">
+    <div class="box">
       <h3>Institute Details</h3>
+      <br>
       <p><strong>Name:</strong> Lal Bahadur Shastri Computer Training Institute</p>
       <p><strong>Owner:</strong> Rahul Shrivastava</p>
       <p><strong>Phone:</strong> +91 9198172422</p>
       <p><strong>Email:</strong> yourmail@example.com</p>
-      <p><strong>Address:</strong> Add your full institute address here</p>
-      <a class="btn" href="https://wa.me/9198172422" target="_blank">WhatsApp Now</a>
+      <p><strong>Address:</strong> Near Arahi Bridge Sukul Bazar</p>
+      <br>
+      <a href="https://wa.me/9198172422" target="_blank" class="btn">WhatsApp Now</a>
     </div>
 
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3567.2025561028063!2d81.58104737486252!3d26.609953376829004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399a35293e587511%3A0xaa56094f0e0a69c9!2sLal%20Bahadur%20Shastri%20Computer%20Training%20Institute!5e0!3m2!1sen!2sin!4v1774979182099!5m2!1sen!2sin"></iframe>
@@ -239,6 +436,7 @@ function sendAdmissionToWhatsApp(event){
   const message = `New Admission Inquiry:%0A%0AStudent Name: ${studentName}%0AFather Name: ${fatherName}%0AMobile: ${mobile}%0ACourse: ${course}%0AAddress: ${address}`;
 
   const whatsappURL = `https://wa.me/9198172422?text=${message}`;
+
   window.open(whatsappURL, '_blank');
 }
 </script>
